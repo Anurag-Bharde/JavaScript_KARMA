@@ -1,19 +1,19 @@
-const fs= require("fs");
+const fs=require("fs");
 
-function mazeko(){
-    return new Promise(function(pinto){
+function might(){
+    return new Promise(function(pintu){
         fs.readFile("a.txt","utf-8",function(err,data){
-            pinto(data);
-            // console.log(data);
+            pintu(data);
         });
-    })
+    }
+    )
 }
 
-function ondo(data){
+function ondd(data){
     console.log(data);
 }
 
 
-let a=mazeko();
+let a=might();
 console.log(a);
-a.then(ondo);
+a.then(ondd)
