@@ -10,5 +10,5 @@ function plus(num1,num2){
     return ans;
 }
 
-const r=funn(9,8,plus)
+const r=funn(9,8,plu)
 console.log(r);
