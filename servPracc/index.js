@@ -2,16 +2,16 @@
 const express=require('express');
 
 const port= 3000
-const app=express();xit
+const app=express();
 
 app.get('/',function(req,res){
-    res.json({
+    res.json([{
         name:"Anurag",
         age:22
     },{
-        name:"Pokimon",
-        age:54
-    })
+        name:"Pokimane",
+        age:191
+    }])
 })
 
 app.listen(port)
