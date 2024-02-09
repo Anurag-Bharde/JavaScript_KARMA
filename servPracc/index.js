@@ -26,7 +26,7 @@ const port= 3000
 const app=express();
 
 app.post('/chalaja',function(req,res){
-    console.log(req.headers["authorization"])
+    console.log(req.Body)
 })
 app.get('/piku',function(req,res){
     res.json([{
