@@ -21,12 +21,15 @@
 
 
 const express=require('express');
+const bodyParser=require('body-parser');
 
-const port= 3000
+const port= 3000;
 const app=express();
 
+app.use(bodyParser.json());
 app.post('/chalaja',function(req,res){
-    console.log(req.Body)
+    console.log(req.body)
+    res.send('REcieved messege')
 })
 app.get('/piku',function(req,res){
     res.json([{
