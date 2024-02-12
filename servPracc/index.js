@@ -27,9 +27,14 @@ const port= 3000;
 const app=express();
 
 app.use(bodyParser.json());
+
+app.get('/go',function(req,res){
+    res.send('<h1>Anurag was here</h1>')
+})
 app.post('/chalaja',function(req,res){
-    console.log(req.body)
+    // res.send('<h1>Anurag was here</h1>')
     res.send('REcieved messege')
+    console.log(req.body)
 })
 app.get('/piku',function(req,res){
     res.json([{
