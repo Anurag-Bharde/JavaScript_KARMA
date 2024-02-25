@@ -1,15 +1,8 @@
-
-function pint(){
-    let ans=0;
-    for(let i=0;i<100;i++){
-        ans+=i;
-    }
-    return ans;
-}
+setTimeout(ondo,5000);
+console.log("ABXZ");
 
 function ondo(){
-    pint();
+    for(let i=0;i<100000;i++){
+        console.log("hero")
+    }
 }
-
-    setTimeout(ondo,5000);
-    console.log("meow");
