@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="intro">dekha ka rha hai</p>
+    <p class="intro">uda de ka goli maar ke</p>
+    <p id="dekh"></p>
+
+    <script>
+        const a=document.getElementsByClassName("intro");
+        document.getElementById("dekh").innerHTML="the elements are "+a[0].innerHTML;
+        
+    </script>
+</body>
+</html>
