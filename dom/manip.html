@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="Loginform">
+        Fname: <input type="text" name="fname" value="Anurag"><br>
+        Lname: <input type="text" value="Bharde"><br>
+        <input type="submit"t><br>
+    </form>
+    <button onclick="myfunc()">try it</button>
+    <p id="okk"></p>
+
+    <script>
+        function myfunc(){
+            let a=document.getElementById("Loginform").elements.length;
+            let b=document.getElementById("Loginform").elements[0].value;
+            document.getElementById("okk").innerHTML = "found" + a +"element in the form last element is = "+b;
+        }
+    </script>
+</body>
+</html>
