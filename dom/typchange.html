@@ -3,20 +3,22 @@
 
 <body>
     
-    first no: <input type="text" id="we" placeholder="enter no 1"><br><br>
+    first no:    <input type="text" id="we" placeholder="enter no 1"><br><br>
     second no:<input type="text" id="ewem" placeholder="enter no 2"><br>
     <button onclick="pinkk()">click me</button>
     <p id="ans">
     </p>
 
     <script>
-        async function pinkk(){
+        function pinkk(){
         let a=document.getElementById("we").value;
         let b=document.getElementById("ewem").value;
         
-      const t=await  fetch("https://sum-server.100xdevs.com/sum?a="+ a+"&b="+b);
-      let bns=await t.text();
-      document.getElementById("ans").innerHTML="solution = "+bns;
+        fetch("https://sum-server.100xdevs.com/sum?a="+ a+"&b="+b).then(function(pint){
+         pint.text().then(function(toing){
+            document.getElementById("ans").innerHTML="solutioin = "+toing;
+         })
+        })
     }
 </script>
         

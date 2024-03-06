@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><b>Interest calculator</b></h1>
+    principal:<input type="text" id="text1" oninput="pdp()" placeholder="number input"><br>
+    rate:<input type="text" id="text2" oninput="pdp()" placeholder="number input"><br>
+    time:<input type="text" id="text3" oninput="pdp()" placeholder="number input"><br>
+    <!-- <button onclick="pdp()">solution</button><br> -->
+    <p id="ans"></p>
+
+    <script>
+    //    async function edp(){
+    //         let a=document.getElementById("text1").value;
+    //         let b=document.getElementById("text2").value;
+    //         let c=document.getElementById("text3").value;
+
+    //        const tem1=await fetch("https://sum-server.100xdevs.com/interest?principal="+1+"&rate="+2+"&time="+1);
+    //        const tem2=await tem1.text();
+    //        console.log(tem2)
+    //        document.getElementById("ans").innerHTML="the answer goes like this = "+tem2;
+    //     }
+    let oldtime;
+    function pdp(){
+         clearTimeout(oldtime);
+         oldtime=setTimeout(function(){edp()},100);
+    }
+        function edp(){
+            let a=document.getElementById("text1").value;
+            let b=document.getElementById("text2").value;
+            let c=document.getElementById("text3").value;
+
+            fetch("https://sum-server.100xdevs.com/interest?principal="+a+"&rate="+b+"&time="+c).then(function (func){
+                func.text().then(function (fun2){
+                    document.getElementById("ans").innerHTML="the solution my suon it is = "+fun2;
+                })
+            })
+       
+            }
+
+    </script>
+</body>
+</html>
