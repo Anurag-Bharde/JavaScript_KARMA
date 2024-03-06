@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    
+    first no:    <input type="text" id="we" placeholder="enter no 1"><br><br>
+    second no:<input type="text" id="ewem" placeholder="enter no 2"><br>
+    <p id="ans">
+    </p>
+
+    <script>
+        let a=document.getElementById("we");
+        let b=document.getElementById("ewem");
+        let c=document.getElementById("ans");
+
+        a.addEventListener("input",update);
+        b.addEventListener("input",update);
+
+        function update(){
+            let num1=parseInt(a.value);
+            let num2=parseInt(b.value);
+            let x=num1+num2;
+           ans.innerHTML= "solution is "+x;
+        }
+
+</script>
+        
+</body>
+</html>
