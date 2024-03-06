@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    
+        first no:<input type="text" id="text1"> <br><br>
+        sec no:<input type="text" id="text2"><br><br>
+    
+    <button onclick="func()">submit</button><br><br>
+        <p id="expert"></p>
+
+        <script>
+            function func(){
+            let a=parseInt(document.getElementById("text1").value);
+            let b=parseInt(document.getElementById("text2").value);
+            let c=a+b;
+            document.getElementById("expert").innerHTML="the values for the sum is"+c;
+            }
+        </script>
+        
+</body>
+</html>
