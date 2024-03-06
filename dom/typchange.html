@@ -3,26 +3,21 @@
 
 <body>
     
-    first no:    <input type="text" id="we" placeholder="enter no 1"><br><br>
+    first no: <input type="text" id="we" placeholder="enter no 1"><br><br>
     second no:<input type="text" id="ewem" placeholder="enter no 2"><br>
+    <button onclick="pinkk()">click me</button>
     <p id="ans">
     </p>
 
     <script>
-        let a=document.getElementById("we");
-        let b=document.getElementById("ewem");
-        let c=document.getElementById("ans");
-
-        a.addEventListener("input",update);
-        b.addEventListener("input",update);
-
-        function update(){
-            let num1=parseInt(a.value);
-            let num2=parseInt(b.value);
-            let x=num1+num2;
-           ans.innerHTML= "solution is "+x;
-        }
-
+        async function pinkk(){
+        let a=document.getElementById("we").value;
+        let b=document.getElementById("ewem").value;
+        
+      const t=await  fetch("https://sum-server.100xdevs.com/sum?a="+ a+"&b="+b);
+      let bns=await t.text();
+      document.getElementById("ans").innerHTML="solution = "+bns;
+    }
 </script>
         
 </body>

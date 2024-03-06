@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    first no:<input oninput="pop()" type="text" id="num1">
+    secod no:<input oninput="pop()" type="text" id="num2">
+    <p id="sum"></p>
+
+    <script>
+        function pop(){
+        let a=parseInt(document.getElementById("num1").value);
+        let b=parseInt(document.getElementById("num2").value);
+        let sum=a+b;
+        document.getElementById("sum").innerHTML="sum = "+sum;
+        }
+    </script>
+</body>
+</html>
