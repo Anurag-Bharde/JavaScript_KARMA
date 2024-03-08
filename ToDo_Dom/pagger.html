@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+      <div id="ask">
+        enter task:<input type="text" id="ask1" placeholder="eter task"><br>
+        enter time:<input type="text" id="ask2" placeholder="eter task"><br>
+        <button onclick="funct()">send response</button><br>
+      </div>
+      <p id="ans"></p>
+    </div>
+    <script>
+        function funct(){
+            let a=document.getElementById("ask1").value;
+            let b=document.getElementById("ask2").value;
+            const elemet=document.createElement("div");
+            elemet.innerHTML=a+"\n"+b+"\n"+<button>Mark as done</button>
+            documenr.getElementById("ans").appendChild(elemet)
+        }
+    </script>
+</body>
+</html>
