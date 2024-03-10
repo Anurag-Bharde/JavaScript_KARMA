@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your task:<input type="text" id="task1" placeholder="Enter here"><br>
+    Enter requ time:<input type="text" id="task2" placeholder="Enter here"><br>
+    <button onclick="myfinc()">click</button>
+    <p id="todos"></p>
+
+    <script>
+        let id=0;
+        function myfinc(){
+            const title=document.getElementById("task1").value;
+            const desc=document.getElementById("task2").value;
+            const pari=document.getElementById("todos");
+
+            pari.appendChild(updater(title,desc,id++));
+        }
+        function updater(title,desc,id){
+            let elemento=document.createElement("div");
+            let firstchild=document.createElement("div");
+            firstchild.innerHTML=title
+            let secchild=document.createElement("div");
+            secchild.innerHTML=desc
+            let thirchild=document.createElement("button");
+            thirchild.innerHTML="Mark as done";
+            thirchild.setAttribute("onClick",`markasdone(${id})`);
+            elemento.appendChild(firstchild);
+            elemento.appendChild(secchild)
+            elemento.appendChild(thirchild)
+            elemento.setAttribute("id",id)
+            return elemento;
+        }
+
+        function markasdone(idd){
+            const par=document.getElementById(idd);
+            par.children[2].innerHTML="Done"
+        }
+    </script>
+</body>
+</html>
