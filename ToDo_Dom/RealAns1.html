@@ -9,8 +9,15 @@
     <input type="text" id="tea1" placeholder="enter text"><br>
     <input type="text" id="tea1" placeholder="enter text"><br>
     <p id="container"></p>
+    <button onclick="butChange()" id="okkjanu">The count is 0</button>
 
     <script>
+           let t=0;
+           function butChange(){
+            t=t+1;
+            document.getElementById("okkjanu").innerHTML=`The count is `+ t;
+           }        
+
         function craet(title,desc,id){
             const fir=document.createElement("div");
             const chil1=document.createElement("div");
@@ -29,17 +36,16 @@
 
         function upfrant(state){
             const paernt= document.getElementById("container");
-            paernt.innerHTML="";
             for(let a=0;a<state.length;a++){
                 const arm=craet(state[a].title, state[a].desc, state[a].id);
                 paernt.appendChild(arm);
             }
         }
-        window.setInterval(async function(){
-           const res=await fetch("https://sum-server.100xdevs.com/todos");
-           const json=await res.json();
-           upfrant(json.todos)
-        },2000)
+        // window.setInterval(async function(){
+        //    const res=await fetch("https://sum-server.100xdevs.com/todos");
+        //    const json=await res.json();
+        //    upfrant(json.todos)
+        // },5000)
 
     </script>
 
